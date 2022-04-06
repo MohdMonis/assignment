@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Auth Demo</title>
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        rel="stylesheet"
+        />
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+        />
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+        rel="stylesheet"
+        />
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+        ></script>
+        <link href="./index.css" rel="stylesheet" />
+        <style>
+            form{
+                border: none;
+            }
+        </style>
+    </head>
+    <body class="d-flex justify-content-center mt-4 p-5">
+        <center><small style="position: absolute; top:20px; left:50%; transform: translate(-50%, 0)"><span id="error" style="color: red"></span></small></center>
+        <!-- costumer -->
+        <div class="card">
+            <div class="card-header">
+                <center><h3>Costumer Login Form</h3></center>
+            </div>
+            <form onsubmit="cos_login()" id="cosloginForm" class="card-body px-5 py-4">
+                
+                <center><label class="custom-field">
+                    <input id="cos_email" type="text" class="input" required />
+                    <span class="placeholder">Email Id</span>
+                </label><br />
+                <label class="custom-field">
+                    <input id="cos_password" type="password" class="input" required />
+                    <span class="placeholder">Password</span>
+                </label></center><br /><br/>
+                <a href="#" onclick="cos_forgotPass()">Forgot Password</a>
+                <center><button type="submit" class="btn btn-primary">Login</button>
+                <button onclick="cos_signUp()" class="btn btn-secondary">Sign Up</button>
+                </center>
+            </form>
+        </div>
+        <!-- seller -->
+        <div class="card">
+            <div class="card-header">
+                <center><h3>Seller Login Form</h3></center>
+            </div>
+            <form onsubmit="sel_login()" id="selloginForm" class="card-body px-5 py-4">
+                <!-- <center><small><span id="error" style="color: red"></span></small></center> -->
+                <center>
+                    
+                <label class="custom-field">
+                    <input id="name" type="text" class="input" required />
+                    <span class="placeholder">Name</span>
+                </label><br />
+
+                <label class="custom-field">
+                    <input id="email" type="text" class="input" required />
+                    <span class="placeholder">Email Id</span>
+                </label><br />
+                <label class="custom-field">
+                    <input id="password" type="password" class="input" required />
+                    <span class="placeholder">Password</span>
+                </label></center><br /><br/>
+                <a href="#" onclick="sel_forgotPass()">Forgot Password</a>
+                <center><button type="submit" class="btn btn-primary">Login</button>
+                <button onclick="sel_signUp()" class="btn btn-secondary">Sign Up</button>
+                </center>
+            </form>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+        <script src="firebase.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
